@@ -1,0 +1,278 @@
+@charset "utf-8";
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  padding-bottom: 75px;
+  min-height: 100%;
+}
+li {
+  list-style: none;
+}
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+div,li {
+  box-sizing: border-box;
+}
+.header_nav {
+  background: linear-gradient(90deg, #fff 20%, rgba(0,0,0,.6) 60%);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.global_nav_item {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.global_nav_item:hover {
+  background: #fff;
+  color: #42210b;
+}
+.global_nav {
+  display: flex;
+  align-items: stretch;
+}
+.logo {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.logo img{
+  width: 100%;
+}
+
+/* 復習：セクション要素は次のタグで作られる<section> <article> <aside> <nav> */
+/* アウトラインとしてセクションは作りませんが、何のコンテンツなのか示すタグとして、<header>と<footer>があります。 */
+/* 各種セレクタを”,(カンマ)”を挟んで並べると、複数のセレクタに同じstyleを適用することができます。 */
+
+.section_inner {
+  padding: 50px 10% 30px;
+}
+
+/* .section_inner2{
+  padding-top: 200px;
+  padding-left: 150px;
+} */
+
+.key {
+  height: 500px;
+  background: center / cover no-repeat url("../images/sample_key.jpg");
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* h1とpを縦並びにする準備としてdisplay：flexを指定
+次いで、h1とpを縦並びにするために、 flex-direction: columnを指定
+次いで、縦並びの方向に対してセンター揃えにするためにjustify-content: center;を指定
+（注意） justify-content: center;とは「そのときに指定されている方向に対してセンターに揃える命令
+対して、align-items: center;とは「そのときに指定されている方向の垂直方向に対してセンターに揃える命令
+いずれも「そのとき指定されている方向が縦か横かが重要」であり、絶対的に「縦方向」「横方向」のセンターを指定するものではない
+※今回の課題では、最初は「align-items: center;」は縦にセンター揃えと思い込んでいたので、それを適用しおかしくなってしまった*/
+
+.key h1{
+  font-size: 2.5rem;
+}
+/* 各種セレクタを半角スペースを挟んで並べると、先頭で指定したセレクタで指定された要素の中の要素を指定することができます。 */
+
+.concept_inner{
+  display: flex;
+  flex-direction: row;
+}
+
+.concept_inner p{
+  width: 60%;
+}
+
+.concept_inner img{
+  width: 35%;
+}
+
+.section_title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.bg {
+  background: center /  cover no-repeat url("../images/sample_menu_bg.jpg");
+  background-position: bottom;
+  background-attachment: fixed;
+}
+/* background・・・の記述を.keyに転用するとキービジュアルが変わる為、上記のタグとURLのパスに間違いがないことは確定 */
+/* だとすると、おかしいのは、.articleに対してこの命令が適用されていない可能性が大きい、それ以外には他の構文とのバッティング？ */
+
+.menu_title {
+  display: inline-block;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  color: #42210b;
+  border-bottom: solid #42210b 1px;
+  margin-bottom: 20px;
+}
+
+.Recommended_menu{
+  display: flex;
+  justify-content: space-between;
+/* 横幅いっぱいに要素を広げて、左右に要素を配置する */
+}
+
+.menu_blueberry{
+  width: 49%;
+  /*写真と説明文のセットで子要素なので、それを49％に指定*/
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.text_blueberry{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.menu_strawberry{
+  width: 49%;
+  /*写真と説明文のセットで子要素なので、それを49％に指定*/
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+} 
+
+.text_strawberry{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.blueberry_image{
+  width: 55%;
+  height: auto;
+}
+
+.strawberry_image{
+  width: 55%;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.caffee_menu_image {
+  width: 20%;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.Cafe_menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+  background-color: #fff;
+/* 横幅いっぱいに要素を広げて、左右に要素を配置する */
+}
+
+.cafe1{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 49%;
+  justify-content: flex-end;
+}
+
+.cafe2{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 49%;
+  justify-content: flex-end;
+}
+
+.cafe3{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 49%;
+  justify-content: flex-end;
+}
+
+.cafe4{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 49%;
+  justify-content: flex-end;
+}
+
+.menu_detail{
+  font-size: 20px;
+}
+
+.price{
+  font-size: 25px;
+  text-align: right;
+}
+
+.cafe_detail{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.price_cafe{
+  font-size: 20px;
+}
+
+.access_detail{
+  display:flex;
+}
+
+.access_title{
+  width: 80px;
+}
+
+.map{
+  width: 100%;
+}
+
+.footer{
+  background-color: #251e19;
+  height: 75px;
+}
+
+.footer_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_item2{
+  padding: 10px;
+  color: #fff;
+}
+
+.rights{
+  text-align: center;
+  color: #fff;
+}
+
+.footer_image{
+  width: 100px;
+  height: auto;
+}
+
+/* CSSでデザインする際、多くの場合、（1）display：flexで「親要素」を整え、（2）その後「子要素」をこまめに調整すると作業ロスが少ない*/
