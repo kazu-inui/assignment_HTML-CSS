@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav class="header_nav">
+        <a href="index.html" class="logo"><img src="images/sample_logo_k.png"></a>
+        <ul class="global_nav">
+          <a href="index.html" class="global_nav_item">
+            <li>Home</li>
+          </a>
+          <a href="#menu" class="global_nav_item">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html" class="global_nav_item">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="key section_inner">
+        <!-- HTMLで複数のclass指定をするには、タグに指定するclass名を「半角スペースを開けて記述」する
+        よって上記の記述"key section_inner"は「key」セレクタの子要素である「section_inner」を指定しているのではなく、divに対してClass「key」と「section_inner」の2つを規程していることを意味している
+        他方、cssファイルでセレクタを「key h1」と指定している場合には「key」要素の中の子要素である「h1」タグに対してスタイル指定していることで意味がまったく異なる
+        このことを理解すると、今回下方の「h1」タグと「P」タグには、Class＝"key"とClass＝""section_inner"がそれぞれ個別に影響を与えていることがわかる
+      　更に、section_innerはその他全体に対してpaddingなどの汎用要素を規程しているだけなので、下方のh1及びpタグに影響するスタイル指定はkey側で行うことがわかる
+      　Class＝keyの記載の仕方についてはCSSファイルの方を参照のこと -->
+        <h1>DIC Coffee</h1>
+        <p>natural organic cafe</p>
+      </div>
+    </header>
+    <section>
+      <article class="section_inner">
+        <div class="section_title">
+          <h1>CONCEPT</h1>
+          <p>DIC Coffeeのこだわり</p>
+        </div>
+        <div class="concept_inner">
+          <p>
+            DIC Coffeeのコーヒーはルワンダ産のコーヒー豆<strong>「DIC Beans」</strong>を使用しています。<br>
+            直接契約したコーヒー農家から仕入れております。<br>
+            バランスの取れた酸味とコクに、フルーティな甘さを感じられる１杯です。ぜひ、こだわりの１杯を
+            お楽しみください。<br>
+            <small>※DIC Cafeは株式会社ダイビックが農場と契約、運営しています。</small>
+          </p>
+          <img src="images/sample_concept.jpg">  
+        </div>
+      </article>
+
+      <article class="section_inner bg">
+          <h1 class="section_title" id="menu">MENU</h1>
+          <section>
+            <div class="center">
+              <h1 class="menu_title">Recommended menu</h1>
+            </div>
+
+            <ul class="Recommended_menu">
+
+              <li class="menu_blueberry">
+                <div class="text_blueberry">
+                  <h2>ブルーベリーパンケーキ</h2>
+                  <p class="menu_detail">フレッシュなブルーベリーをトッピングしたパンケーキです</p>
+                  <p class="price">¥1,200</p>  
+                </div>
+                <img class="blueberry_image" src="images/sample_pancake1.jpg">
+              </li>
+
+              <li class="menu_strawberry">
+                <div class="text_strawberry">
+                  <h2>ストロベリーパンケーキ</h2>
+                  <p class="menu_detail">イチゴとはちみつのコラボレーションをお楽しみください</p>
+                  <p class="price">¥1,300</p>  
+                </div>
+                <img class="strawberry_image" src="images/sample_pancake2.jpg">
+              </li>
+
+            </ul>
+
+          </section>
+          <section>
+            <div class="center">
+              <h1 class="menu_title">Coffee menu</h1>
+            </div>
+            
+            <ul class="Cafe_menu">
+              <li class="cafe1">
+                <div class="cafe_detail">
+                  <h2>ブレンドコーヒー</h2>
+                  <p class="price_cafe">¥400</p>
+                </div>
+                <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+              </li>
+              <li class="cafe2">
+                <div class="cafe_detail">
+                  <h2>アートラテ</h2>
+                  <p class="price_cafe">¥500</p>        
+                </div>
+                <img src="images/sample_cafe2.jpg" class="caffee_menu_image">
+              </li>
+              <li class="cafe3">
+                <div class="cafe_detail">
+                  <h2>カフェラテ</h2>
+                  <p class="price_cafe">¥450</p>
+                </div>
+                <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+              </li>
+              <li class="cafe4">
+                <div class="cafe_detail">
+                  <h2>アイスコーヒー</h2>
+                  <p class="price_cafe">¥350</p>
+                </div>
+                <img src="images/sample_cafe4.jpg" class="caffee_menu_image">
+              </li>
+            </ul>
+
+          </section>     
+      </article>
+
+      <article class="section_inner">
+        <div class="section_title">
+          <h1>ACCESS</h1>
+          <p>店舗情報</p>
+        </div>
+        <dl class="access_detail">
+          <dt class="access_title">営業時間</dt>
+          <dd>10:00 - 19:00<br>木曜日定休</dd>
+        </dl>
+        <dl class="access_detail">
+          <dt class="access_title">住所</dt>
+          <dd>
+            〒150-0044 東京都渋谷区円山町28番4号大場ビルA館<br>
+            TEL:03-5459-1808
+          </dd>
+        </dl>
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8625569899887!2d139.6922821152582!3d35.65575778020021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55bb707eff%3A0x5f04575eb7aca63e!2z44CSMTUwLTAwNDQg5p2x5Lqs6YO95riL6LC35Yy65YaG5bGx55S677yS77yY4oiS77yUIE9iYSBCbGQuIEHppKg!5e0!3m2!1sja!2sjp!4v1589613763992!5m2!1sja!2sjp"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <nav>
+        <ul class="footer_item">
+          <a href="index.html">
+            <li class="footer_item2">Home</li>
+          </a>
+          <a href="#menu">
+            <li class="footer_item2">Menu</li>
+          </a>
+          <a href="contact.html">
+            <li class="footer_item2">Contact</li>
+          </a>
+          <a href="index.html">
+            <li>
+              <img class="footer_image" src="images/sample_logo_w.png">
+            </li>
+          </a>
+        </ul>
+      </nav>
+      <p class="rights">© DIVIC Corp. All RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+
+</html>
